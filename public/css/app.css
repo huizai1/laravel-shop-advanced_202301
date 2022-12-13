@@ -10825,6 +10825,10 @@ body {
   font-size: 14px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* header */
 .navbar-static-top {
   border-color: #e7e7e7;
