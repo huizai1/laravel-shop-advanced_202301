@@ -235,4 +235,6 @@ return [
     // 未支付订单生存时间
     'order_ttl' => 1800,
 
+    // 内网穿刺，用于支付回调
+    'ngrok_url' => env('NGROK_URL'),
 ];
