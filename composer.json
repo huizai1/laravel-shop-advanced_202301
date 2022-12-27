@@ -15,7 +15,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.0",
         "overtrue/laravel-lang": "~5.0",
-        "yansongda/pay": "^3.2"
+        "symfony/event-dispatcher": "5.4.x-dev",
+        "yansongda/pay": "2.10.2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

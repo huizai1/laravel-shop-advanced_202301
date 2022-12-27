@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0da36a647d2de2ffb0fdb60a5cf184fa",
+    "content-hash": "71cd2f9857800b2b605dd87de2f0d566",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4304,16 +4304,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v6.2.0",
+            "version": "5.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "9efb1618fabee89515fe031314e8ed5625f85a53"
+                "reference": "8e18a9d559eb8ebc2220588f1faa726a2fcd31c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/9efb1618fabee89515fe031314e8ed5625f85a53",
-                "reference": "9efb1618fabee89515fe031314e8ed5625f85a53",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/8e18a9d559eb8ebc2220588f1faa726a2fcd31c9",
+                "reference": "8e18a9d559eb8ebc2220588f1faa726a2fcd31c9",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4323,25 +4323,27 @@
                 ]
             },
             "require": {
-                "php": ">=8.1",
-                "symfony/event-dispatcher-contracts": "^2|^3"
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/event-dispatcher-contracts": "^2|^3",
+                "symfony/polyfill-php80": "^1.16"
             },
             "conflict": {
-                "symfony/dependency-injection": "<5.4"
+                "symfony/dependency-injection": "<4.4"
             },
             "provide": {
                 "psr/event-dispatcher-implementation": "1.0",
-                "symfony/event-dispatcher-implementation": "2.0|3.0"
+                "symfony/event-dispatcher-implementation": "2.0"
             },
             "require-dev": {
                 "psr/log": "^1|^2|^3",
-                "symfony/config": "^5.4|^6.0",
-                "symfony/dependency-injection": "^5.4|^6.0",
-                "symfony/error-handler": "^5.4|^6.0",
-                "symfony/expression-language": "^5.4|^6.0",
-                "symfony/http-foundation": "^5.4|^6.0",
+                "symfony/config": "^4.4|^5.0|^6.0",
+                "symfony/dependency-injection": "^4.4|^5.0|^6.0",
+                "symfony/error-handler": "^4.4|^5.0|^6.0",
+                "symfony/expression-language": "^4.4|^5.0|^6.0",
+                "symfony/http-foundation": "^4.4|^5.0|^6.0",
                 "symfony/service-contracts": "^1.1|^2|^3",
-                "symfony/stopwatch": "^5.4|^6.0"
+                "symfony/stopwatch": "^4.4|^5.0|^6.0"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -4373,7 +4375,7 @@
             "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher/tree/v6.2.0"
+                "source": "https://github.com/symfony/event-dispatcher/tree/5.4"
             },
             "funding": [
                 {
@@ -4389,7 +4391,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-02T09:08:04+00:00"
+            "time": "2022-12-12T15:54:21+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -6633,16 +6635,16 @@
         },
         {
             "name": "yansongda/pay",
-            "version": "v3.2.11",
+            "version": "v2.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yansongda/pay.git",
-                "reference": "53aa073ccfaee238a73f8256e01c096754a68303"
+                "reference": "8c258853b142c6d7589629b047ca5cb21232b509"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yansongda/pay/zipball/53aa073ccfaee238a73f8256e01c096754a68303",
-                "reference": "53aa073ccfaee238a73f8256e01c096754a68303",
+                "url": "https://api.github.com/repos/yansongda/pay/zipball/8c258853b142c6d7589629b047ca5cb21232b509",
+                "reference": "8c258853b142c6d7589629b047ca5cb21232b509",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -6657,36 +6659,18 @@
                 "ext-libxml": "*",
                 "ext-openssl": "*",
                 "ext-simplexml": "*",
-                "php": ">=7.4",
-                "psr/container": "^1.1 | ^2.0",
-                "psr/event-dispatcher": "^1.0",
-                "psr/http-client": "^1.0",
-                "psr/http-message": "^1.0",
-                "psr/log": "^1.1 | ^2.0 | ^3.0",
-                "yansongda/supports": "~3.2.0"
+                "php": ">=7.1.3",
+                "symfony/event-dispatcher": "^4.0 || ^5.0",
+                "symfony/http-foundation": "^4.0 || ^5.0.7",
+                "yansongda/supports": "^2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.0",
-                "guzzlehttp/guzzle": "^7.0",
-                "mockery/mockery": "^1.4",
-                "monolog/monolog": "^2.2",
-                "phpstan/phpstan": "^1.0.0",
-                "phpunit/phpunit": "^9.0",
-                "symfony/event-dispatcher": "^5.2.0",
-                "symfony/http-foundation": "^5.2.0",
-                "symfony/psr-http-message-bridge": "^2.1",
-                "symfony/var-dumper": "^5.1"
-            },
-            "suggest": {
-                "hyperf/utils": "Hyperf 框架下使用 SDK，请安装",
-                "illuminate/container": "Laravel 框架下使用 SDK，请安装",
-                "php-di/php-di": "其它/无框架下使用 SDK，请安装"
+                "friendsofphp/php-cs-fixer": "^2.15",
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^7.5"
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "src/Functions.php"
-                ],
                 "psr-4": {
                     "Yansongda\\Pay\\": "src"
                 }
@@ -6701,31 +6685,30 @@
                     "email": "me@yansongda.cn"
                 }
             ],
-            "description": "可能是我用过的最优雅的 Alipay 和 WeChat 的支付 SDK 扩展包了",
+            "description": "专注 Alipay 和 WeChat 的支付扩展包",
             "keywords": [
                 "alipay",
                 "pay",
                 "wechat"
             ],
             "support": {
-                "homepage": "https://pay.yansongda.cn",
                 "issues": "https://github.com/yansongda/pay/issues",
                 "source": "https://github.com/yansongda/pay"
             },
-            "time": "2022-12-22T10:04:42+00:00"
+            "time": "2021-01-18T01:48:43+00:00"
         },
         {
             "name": "yansongda/supports",
-            "version": "v3.2.5",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yansongda/supports.git",
-                "reference": "c3f736efe169696cef94730976e604a61c345b5c"
+                "reference": "de9a8d38b0461ddf9c12f27390dad9a40c9b4e3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yansongda/supports/zipball/c3f736efe169696cef94730976e604a61c345b5c",
-                "reference": "c3f736efe169696cef94730976e604a61c345b5c",
+                "url": "https://api.github.com/repos/yansongda/supports/zipball/de9a8d38b0461ddf9c12f27390dad9a40c9b4e3b",
+                "reference": "de9a8d38b0461ddf9c12f27390dad9a40c9b4e3b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -6735,25 +6718,20 @@
                 ]
             },
             "require": {
-                "php": ">=7.4"
+                "guzzlehttp/guzzle": "^6.2 || ^7.0",
+                "monolog/monolog": "^1.23 || ^2.0",
+                "php": ">=7.1.3"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.0",
-                "mockery/mockery": "^1.4",
-                "monolog/monolog": "^2.0",
-                "phpstan/phpstan": "^1.1.0",
-                "phpunit/phpunit": "^9.0",
-                "symfony/console": "^5.1"
+                "friendsofphp/php-cs-fixer": "^2.15",
+                "phpunit/phpunit": "^7.5",
+                "predis/predis": "^1.1"
             },
             "suggest": {
-                "monolog/monolog": "Use logger",
-                "symfony/console": "Use stdout logger"
+                "predis/predis": "Allows to use throttle feature"
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "src/Functions.php"
-                ],
                 "psr-4": {
                     "Yansongda\\Supports\\": "src/"
                 }
@@ -6770,16 +6748,19 @@
             ],
             "description": "common components",
             "keywords": [
+                "Guzzle",
                 "array",
                 "collection",
                 "config",
-                "support"
+                "http",
+                "support",
+                "throttle"
             ],
             "support": {
                 "issues": "https://github.com/yansongda/supports/issues",
                 "source": "https://github.com/yansongda/supports"
             },
-            "time": "2022-03-28T10:25:04+00:00"
+            "time": "2020-10-14T08:17:18+00:00"
         }
     ],
     "packages-dev": [
@@ -9280,7 +9261,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "symfony/event-dispatcher": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
