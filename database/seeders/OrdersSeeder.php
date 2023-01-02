@@ -60,7 +60,7 @@ class OrdersSeeder extends Seeder
                 ]);
 
             $product->update([
-                'rating'       => $result->fating ?: 5, // 如查某个商品没有评分，则默认为 5 分
+                'rating'       => $result->rating ?: 5, // 如果某个商品没有评分，则默认为 5 分
                 'review_count' => $result->review_count,
                 'sold_count'   => $result->sold_count,
             ]);
