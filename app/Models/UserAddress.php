@@ -20,6 +20,7 @@ class UserAddress extends Model
         'last_used_at',
     ];
     protected $dates = ['last_used_at'];
+    protected $appends = ['full_address'];
 
     public function user()
     {
