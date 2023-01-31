@@ -207,6 +207,10 @@ class OrderService
     {
         // 将 $addressData 传入匿名函数
         $order = \DB::transaction(function () use ($user, $addressData, $sku) {
+            // 从 Redis 中读取数据，判断库存
+            if (Redis::decr('seckill_sku_'.$sku->id) < 0) {
+                throw new InvalidRequestException('该商品库存不足');
+            }
             // 将之前的更新收货地址的最后使用时间代码删除
             $order = new Order([
                 'address'      => [ // address 字段直接从 $addressData 数组中读取
@@ -231,8 +235,6 @@ class OrderService
             $item->product()->associate($sku->product_id);
             $item->productSku()->associate($sku);
             $item->save();
-
-            Redis::decr('seckill_sku_'.$sku->id);
 
             return $order;
         });
