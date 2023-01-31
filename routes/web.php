@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // 延迟校验身份，所以放在最开头可以节省掉很多匹配路由的资源消耗
-Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store');
+Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store')->middleware('random_drop:80');
 
 // Route::get('/', 'PagesController@root')->name('root');
 
