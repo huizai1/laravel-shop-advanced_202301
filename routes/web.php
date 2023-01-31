@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// 延迟校验身份，所以放在最开头可以节省掉很多匹配路由的资源消耗
+Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store');
+
 // Route::get('/', 'PagesController@root')->name('root');
 
 Auth::routes(['verify' => true]);
@@ -58,8 +61,6 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::get('installments/{installment}/alipay', 'InstallmentsController@payByAlipay')->name('installments.alipay');
     Route::get('installments/alipay/return', 'InstallmentsController@alipayReturn')->name('installments.alipay.return');
     Route::get('installments/{installment}/wechat', 'InstallmentsController@payByWechat')->name('installments.wechat');
-
-    Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store');
 });
 
 Route::redirect('/', '/products')->name('root');
